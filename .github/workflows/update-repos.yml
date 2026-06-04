@@ -1,0 +1,55 @@
+name: Update Featured Repos
+
+on:
+  schedule:
+    - cron: '0 3 * * 0'  # Weekly on Sunday at 3 AM UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-featured-repos:
+    name: Update featured project badges
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Fetch top repositories
+        id: repos
+        run: |
+          # Get top 4 repos by stars (excluding forks)
+          repos=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            "https://api.github.com/users/supernovaprime/repos?per_page=100&type=owner&sort=stargazers&direction=desc")
+          
+          # Filter out forks and get top 4
+          top_repos=$(echo "$repos" | jq '[.[] | select(.fork == false) | {name: .name, stars: .stargazers_count, forks: .forks_count, description: .description, homepage: .homepage, html_url: .html_url, language: .language, updated_at: .updated_at}] | sort_by(-.stars) | .[0:4]')
+          
+          echo "top_repos=$top_repos" >> $GITHUB_OUTPUT
+
+      - name: Generate updated README section
+        run: |
+          # This would dynamically update the featured projects section
+          # For now, the badges are dynamic via shields.io so they auto-update
+          echo "Top repos fetched: $(echo '${{ steps.repos.outputs.top_repos }}' | jq length) projects"
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          
+          if ! git diff --quiet; then
+            git add README.md
+            git commit -m "chore: update featured repos [skip ci]"
+            git push
+          else
+            echo "No changes to commit"
+          fi

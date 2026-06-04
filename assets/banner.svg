@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 200" width="1200" height="200">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1117;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#161b22;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0d1117;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#a371f7;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#58a6ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f778ba;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="glowGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#a371f7;stop-opacity:0.3" />
+      <stop offset="50%" style="stop-color:#58a6ff;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#f778ba;stop-opacity:0.3" />
+    </linearGradient>
+    <radialGradient id="orb1" cx="20%" cy="30%" r="40%">
+      <stop offset="0%" style="stop-color:#a371f7;stop-opacity:0.15" />
+      <stop offset="100%" style="stop-color:#a371f7;stop-opacity:0" />
+    </radialGradient>
+    <radialGradient id="orb2" cx="80%" cy="70%" r="35%">
+      <stop offset="0%" style="stop-color:#58a6ff;stop-opacity:0.12" />
+      <stop offset="100%" style="stop-color:#58a6ff;stop-opacity:0" />
+    </radialGradient>
+    <radialGradient id="orb3" cx="50%" cy="50%" r="25%">
+      <stop offset="0%" style="stop-color:#f778ba;stop-opacity:0.1" />
+      <stop offset="100%" style="stop-color:#f778ba;stop-opacity:0" />
+    </radialGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="textGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <style>
+      @keyframes float {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-10px); }
+      }
+      @keyframes pulse {
+        0%, 100% { opacity: 0.6; }
+        50% { opacity: 1; }
+      }
+      @keyframes shimmer {
+        0% { background-position: -200% center; }
+        100% { background-position: 200% center; }
+      }
+      .orb { animation: float 6s ease-in-out infinite; }
+      .orb:nth-child(2) { animation-delay: -2s; }
+      .orb:nth-child(3) { animation-delay: -4s; }
+      .title { animation: pulse 3s ease-in-out infinite; }
+      .subtitle { animation: shimmer 4s linear infinite; background: linear-gradient(90deg, #a371f7, #58a6ff, #f778ba, #a371f7); background-size: 200% auto; -webkit-background-clip: text; background-clip: text; color: transparent; }
+    </style>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="200" fill="url(#bgGradient)"/>
+  
+  <!-- Floating orbs -->
+  <circle class="orb" cx="240" cy="60" r="120" fill="url(#orb1)"/>
+  <circle class="orb" cx="960" cy="140" r="100" fill="url(#orb2)"/>
+  <circle class="orb" cx="600" cy="100" r="80" fill="url(#orb3)"/>
+  
+  <!-- Grid pattern overlay -->
+  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="url(#glowGradient)" stroke-width="0.3" opacity="0.1"/>
+  </pattern>
+  <rect width="1200" height="200" fill="url(#grid)"/>
+  
+  <!-- Top accent line -->
+  <line x1="0" y1="0" x2="1200" y2="0" stroke="url(#textGradient)" stroke-width="2" opacity="0.8"/>
+  
+  <!-- Main title -->
+  <text x="600" y="95" text-anchor="middle" font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="42" font-weight="800" letter-spacing="4" fill="url(#textGradient)" filter="url(#textGlow)" class="title">
+    SUPERNOVAPRIME
+  </text>
+  
+  <!-- Subtitle -->
+  <text x="600" y="135" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="500" letter-spacing="2" class="subtitle">
+    FULL-STACK DEVELOPER  •  SYSTEMS ARCHITECT  •  OPEN SOURCE
+  </text>
+  
+  <!-- Decorative separator -->
+  <g transform="translate(600, 155)">
+    <line x1="-80" y1="0" x2="-30" y2="0" stroke="url(#textGradient)" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="0" cy="0" r="4" fill="url(#textGradient)"/>
+    <line x1="30" y1="0" x2="80" y2="0" stroke="url(#textGradient)" stroke-width="2" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Bottom accent line -->
+  <line x1="0" y1="200" x2="1200" y2="200" stroke="url(#textGradient)" stroke-width="2" opacity="0.8"/>
+  
+  <!-- Corner accents -->
+  <g opacity="0.4">
+    <path d="M 30 30 L 30 80 M 30 30 L 80 30" stroke="url(#textGradient)" stroke-width="2" stroke-linecap="round" fill="none"/>
+    <path d="M 1170 30 L 1120 30 M 1170 30 L 1170 80" stroke="url(#textGradient)" stroke-width="2" stroke-linecap="round" fill="none"/>
+    <path d="M 30 170 L 30 120 M 30 170 L 80 170" stroke="url(#textGradient)" stroke-width="2" stroke-linecap="round" fill="none"/>
+    <path d="M 1170 170 L 1120 170 M 1170 170 L 1170 120" stroke="url(#textGradient)" stroke-width="2" stroke-linecap="round" fill="none"/>
+  </g>
+</svg>

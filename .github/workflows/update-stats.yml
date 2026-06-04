@@ -1,0 +1,65 @@
+name: Update GitHub Stats
+
+on:
+  schedule:
+    - cron: '0 2 * * *'  # Daily at 2 AM UTC
+  workflow_dispatch:  # Manual trigger
+
+permissions:
+  contents: write
+
+jobs:
+  update-readme:
+    name: Update README with latest stats
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Fetch GitHub stats
+        id: stats
+        run: |
+          # Fetch user stats via GitHub API
+          response=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            "https://api.github.com/users/supernovaprime")
+          
+          public_repos=$(echo "$response" | jq '.public_repos')
+          followers=$(echo "$response" | jq '.followers')
+          total_stars=0
+          
+          # Fetch total stars across all repos
+          repos=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            "https://api.github.com/users/supernovaprime/repos?per_page=100&type=owner")
+          total_stars=$(echo "$repos" | jq '[.[] | .stargazers_count] | add // 0')
+          
+          echo "public_repos=$public_repos" >> $GITHUB_OUTPUT
+          echo "followers=$followers" >> $GITHUB_OUTPUT
+          echo "total_stars=$total_stars" >> $GITHUB_OUTPUT
+
+      - name: Update README badges
+        run: |
+          # Update the profile views, followers, stars badges in README
+          # These are dynamic via shields.io so they auto-update on page load
+          # This step is mainly for any static values we want to commit
+          echo "Stats fetched: ${{ steps.stats.outputs.public_repos }} repos, ${{ steps.stats.outputs.followers }} followers, ${{ steps.stats.outputs.total_stars }} stars"
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          
+          # Check if there are any changes to commit
+          if ! git diff --quiet; then
+            git add README.md
+            git commit -m "chore: update GitHub stats [skip ci]"
+            git push
+          else
+            echo "No changes to commit"
+          fi
