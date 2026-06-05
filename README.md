@@ -1,7 +1,7 @@
 <!-- Animated Background & Header Illustration -->
 <p align="center">
 
-<svg width="860" height="280" viewBox="0 0 860 280" xmlns="http://www.w3.org/2000/svg">
+<svg width="100%" height="280" viewBox="0 0 860 280" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="neonGradient" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#00d4ff"/><stop offset="33%" style="stop-color:#39ff14"/><stop offset="66%" style="stop-color:#bc13fe"/><stop offset="100%" style="stop-color:#00d4ff"/></linearGradient>
     <pattern id="stars" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
@@ -77,7 +77,7 @@ const supernovaprime = {
 
 **Skills Proficiency (Animated)**
 
-<svg width="860" height="240" viewBox="0 0 860 240" xmlns="http://www.w3.org/2000/svg">
+<svg width="100%" height="240" viewBox="0 0 860 240" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="skillGrad" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#00d4ff"/><stop offset="33%" style="stop-color:#39ff14"/><stop offset="66%" style="stop-color:#bc13fe"/><stop offset="100%" style="stop-color:#00d4ff"/></linearGradient>
   </defs>
@@ -117,7 +117,9 @@ const supernovaprime = {
 
 ## 📊 GitHub Analytics
 
-<svg width="860" height="300" viewBox="0 0 860 300" xmlns="http://www.w3.org/2000/svg">
+<p align="center">
+
+<svg width="100%" height="300" viewBox="0 0 860 300" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="dataGrad" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#00d4ff"/><stop offset="33%" style="stop-color:#39ff14"/><stop offset="66%" style="stop-color:#bc13fe"/><stop offset="100%" style="stop-color:#00d4ff"/></linearGradient>
   </defs>
@@ -148,6 +150,8 @@ const supernovaprime = {
   <rect x="188" y="252" width="12" height="12" rx="2" fill="#0a0a12"><animate attributeName="fill" values="#0a0a12;#0e4429" dur="0.3s" fill="freeze" begin="0.86s"/></rect>
   <rect x="204" y="252" width="12" height="12" rx="2" fill="#0a0a12"><animate attributeName="fill" values="#0a0a12;#006d32;#26a641;#39d353" dur="0.3s" fill="freeze" begin="0.88s"/></rect>
 </svg>
+
+</p>
 
 ---
 

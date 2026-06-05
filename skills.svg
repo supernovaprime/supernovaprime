@@ -1,0 +1,92 @@
+<svg width="860" height="240" viewBox="0 0 860 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="neonGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00d4ff"/>
+      <stop offset="50%" stop-color="#bc13fe"/>
+      <stop offset="100%" stop-color="#39ff14"/>
+    </linearGradient>
+    <linearGradient id="barGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00d4ff"/>
+      <stop offset="100%" stop-color="#bc13fe"/>
+    </linearGradient>
+    <linearGradient id="barGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#bc13fe"/>
+      <stop offset="100%" stop-color="#39ff14"/>
+    </linearGradient>
+  </defs>
+
+  <style>
+    @keyframes fillBar1 { from { width: 0px; } to { width: 220px; } }
+    @keyframes fillBar2 { from { width: 0px; } to { width: 210px; } }
+    @keyframes fillBar3 { from { width: 0px; } to { width: 195px; } }
+    @keyframes fillBar4 { from { width: 0px; } to { width: 180px; } }
+    @keyframes fillBar5 { from { width: 0px; } to { width: 200px; } }
+    @keyframes fillBar6 { from { width: 0px; } to { width: 170px; } }
+    @keyframes fillBar7 { from { width: 0px; } to { width: 185px; } }
+    @keyframes fillBar8 { from { width: 0px; } to { width: 190px; } }
+    
+    .neon-text { font-family: 'JetBrains Mono', 'Fira Code', monospace, sans-serif; }
+    .skill-title { font-weight: bold; fill: #888899; font-size: 11.5px; }
+    .skill-val { font-weight: bold; fill: #555577; font-size: 10px; }
+    .bg-bar { fill: #111122; rx: 6px; }
+    .fill-bar { rx: 6px; }
+    
+    .b1 { animation: fillBar1 2s cubic-bezier(0.1, 0.8, 0.2, 1) forwards; }
+    .b2 { animation: fillBar2 2s cubic-bezier(0.1, 0.8, 0.2, 1) forwards; }
+    .b3 { animation: fillBar3 2s cubic-bezier(0.1, 0.8, 0.2, 1) forwards; }
+    .b4 { animation: fillBar4 2s cubic-bezier(0.1, 0.8, 0.2, 1) forwards; }
+    .b5 { animation: fillBar5 2s cubic-bezier(0.1, 0.8, 0.2, 1) forwards; }
+    .b6 { animation: fillBar6 2s cubic-bezier(0.1, 0.8, 0.2, 1) forwards; }
+    .b7 { animation: fillBar7 2s cubic-bezier(0.1, 0.8, 0.2, 1) forwards; }
+    .b8 { animation: fillBar8 2s cubic-bezier(0.1, 0.8, 0.2, 1) forwards; }
+  </style>
+
+  <!-- Card Background -->
+  <rect width="860" height="240" rx="12" fill="#06060c" stroke="#1a1a2e" stroke-width="1.5"/>
+
+  <!-- Title -->
+  <text class="neon-text" x="30" y="35" font-size="13" font-weight="bold" fill="url(#neonGradient)">🔧 SKILL PROFICIENCY MATRIX</text>
+  <line x1="30" y1="48" x2="830" y2="48" stroke="#1a1a2e" stroke-width="1"/>
+
+  <!-- Left Column -->
+  <text class="neon-text skill-title" x="40" y="80">React / Next.js</text>
+  <rect class="bg-bar" x="160" y="71" width="230" height="10"/>
+  <rect class="fill-bar b1" x="160" y="71" width="220" height="10" fill="url(#barGrad)"/>
+  <text class="neon-text skill-val" x="400" y="80">95%</text>
+
+  <text class="neon-text skill-title" x="40" y="115">TypeScript</text>
+  <rect class="bg-bar" x="160" y="106" width="230" height="10"/>
+  <rect class="fill-bar b2" x="160" y="106" width="210" height="10" fill="url(#barGrad)"/>
+  <text class="neon-text skill-val" x="400" y="115">90%</text>
+
+  <text class="neon-text skill-title" x="40" y="150">Node.js</text>
+  <rect class="bg-bar" x="160" y="141" width="230" height="10"/>
+  <rect class="fill-bar b3" x="160" y="141" width="195" height="10" fill="url(#barGrad)"/>
+  <text class="neon-text skill-val" x="400" y="150">85%</text>
+
+  <text class="neon-text skill-title" x="40" y="185">PostgreSQL</text>
+  <rect class="bg-bar" x="160" y="176" width="230" height="10"/>
+  <rect class="fill-bar b4" x="160" y="176" width="180" height="10" fill="url(#barGrad)"/>
+  <text class="neon-text skill-val" x="400" y="185">80%</text>
+
+  <!-- Right Column -->
+  <text class="neon-text skill-title" x="450" y="80">Tailwind CSS</text>
+  <rect class="bg-bar" x="570" y="71" width="230" height="10"/>
+  <rect class="fill-bar b5" x="570" y="71" width="200" height="10" fill="url(#barGrad2)"/>
+  <text class="neon-text skill-val" x="810" y="80">88%</text>
+
+  <text class="neon-text skill-title" x="450" y="115">Python</text>
+  <rect class="bg-bar" x="570" y="106" width="230" height="10"/>
+  <rect class="fill-bar b6" x="570" y="106" width="170" height="10" fill="url(#barGrad2)"/>
+  <text class="neon-text skill-val" x="810" y="115">75%</text>
+
+  <text class="neon-text skill-title" x="450" y="150">GraphQL</text>
+  <rect class="bg-bar" x="570" y="141" width="230" height="10"/>
+  <rect class="fill-bar b7" x="570" y="141" width="185" height="10" fill="url(#barGrad2)"/>
+  <text class="neon-text skill-val" x="810" y="150">80%</text>
+
+  <text class="neon-text skill-title" x="450" y="185">AWS / Docker</text>
+  <rect class="bg-bar" x="570" y="176" width="230" height="10"/>
+  <rect class="fill-bar b8" x="570" y="176" width="190" height="10" fill="url(#barGrad2)"/>
+  <text class="neon-text skill-val" x="810" y="185">82%</text>
+</svg>
