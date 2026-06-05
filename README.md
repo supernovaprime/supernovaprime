@@ -1,280 +1,150 @@
-# supernovaprime
+<!-- Header SVG Banner -->
+<div align="center">
 
-<p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=32&duration=2800&pause=2000&color=A855F7&center=true&vCenter=true&width=940&lines=Hey+there%2C+I'm+supernovaprime;Software+Engineer+%7C+Full-Stack+Web+Developer;Building+for+the+Web+at+Velvron+Labs;Clean+Code+%7C+Scalable+Architecture+%7C+DX" alt="Typing Animation" />
-</p>
+<svg width="860" height="180" viewBox="0 0 860 180" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d0d0f"/>
+      <stop offset="100%" style="stop-color:#13131a"/>
+    </linearGradient>
+    <linearGradient id="nameGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#7c6aff"/>
+      <stop offset="100%" style="stop-color:#00e5c9"/>
+    </linearGradient>
+  </defs>
+  <rect width="860" height="180" rx="14" fill="url(#bg)"/>
+  <rect width="860" height="2" rx="1" fill="url(#nameGrad)" opacity="0.6"/>
+  <text x="40" y="52" font-family="monospace" font-size="12" fill="#00e5c9" opacity="0.8">● available for work</text>
+  <text x="40" y="100" font-family="monospace" font-size="36" font-weight="bold" fill="url(#nameGrad)">Supernovaprime</text>
+  <text x="42" y="130" font-family="monospace" font-size="14" fill="#888899">&gt; Turning ideas into scalable digital products</text>
+  <text x="42" y="158" font-family="monospace" font-size="12" fill="#555566">Senior Full-stack &amp; Mobile Engineer · React / Next.js / TypeScript</text>
+</svg>
 
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=supernovaprime&show_icons=true&theme=radical&hide_border=true&include_all_commits=true&count_private=true&rank_icon=github&custom_title=GitHub+Stats&title_color=A855F7&text_color=E6EDF3&icon_color=58A6FF&bg_color=0D1117" alt="GitHub Stats" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=supernovaprime&layout=compact&theme=radical&hide_border=true&title_color=A855F7&text_color=E6EDF3&bg_color=0D1117&langs_count=10" alt="Top Languages" />
-</p>
-
-<p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=supernovaprime&theme=radical&hide_border=true&background=0D1117&stroke=A855F7&ring=A855F7&fire=A855F7&currStreakLabel=58A6FF&sideNums=E6EDF3&sideLabels=8B949E&dates=E6EDF3" alt="GitHub Streak" />
-</p>
+</div>
 
 ---
 
-## 🚀 About Me
+## 👾 About Me
 
-```yaml
-name: "supernovaprime"
-pronouns: "he/him"
-role: "Software Engineer | Full-Stack Web Developer"
-current_focus: "Full-Stack Web Development, Developer Experience, Performance Optimization"
-company: "Velvron Labs"
-location: "Agona Swedru, Ghana 🇬🇭 | GMT+0"
-availability: "Open to collaborations & interesting problems"
-experience: "3+ years"
-projects_completed: "50+"
+```typescript
+const supernovaprime = {
+  location:   "Accra, Ghana 🇬🇭",
+  role:       "Senior Full-stack & Mobile Engineer",
+  focus:      ["Web Platforms", "Mobile Apps", "Scalable APIs"],
+  tagline:    "Turning ideas into scalable digital products",
+  status:     "🚀 Currently shipping v2.0",
+  openTo:     ["Senior Roles", "Consulting", "Open Source Collabs"],
+  funFact:    "Coffee → Code → Repeat ☕",
+};
 ```
 
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=react,nextjs,typescript,tailwind,nodejs,python,postgresql,redis,aws,docker,githubactions,git,linux,vim,vercel&theme=dark&perline=10" alt="Tech Stack" />
-</p>
-
-<p align="center">
-  <a href="https://supernovaprimeportfolio.vercel.app">
-    <img src="https://img.shields.io/badge/Portfolio-supernovaprimeportfolio.vercel.app-000000?style=for-the-badge&logo=vercel&logoColor=white&labelColor=181717&color=A855F7" alt="Portfolio" />
-  </a>
-  <a href="https://velvronlabs.vercel.app">
-    <img src="https://img.shields.io/badge/Velvron%20Labs-velvronlabs.vercel.app-000000?style=for-the-badge&logo=github&logoColor=white&labelColor=181717&color=58A6FF" alt="Velvron Labs" />
-  </a>
-  <a href="/resume.pdf">
-    <img src="https://img.shields.io/badge/Resume-Download-000000?style=for-the-badge&logo=adobeacrobatreader&logoColor=white&labelColor=181717&color=3FB950" alt="Resume" />
-  </a>
-</p>
-
-<p align="center">
-  <img src="https://img.shields.io/badge/Experience-3%2B%20Years-A855F7?style=flat-square&logo=github&logoColor=white" alt="Experience" />
-  <img src="https://img.shields.io/badge/Projects-50%2B-58A6FF?style=flat-square&logo=github&logoColor=white" alt="Projects" />
-  <img src="https://img.shields.io/badge/Clients-30%2B-3FB950?style=flat-square&logo=github&logoColor=white" alt="Clients" />
-  <img src="https://img.shields.io/badge/Awards-15%2B-F778BA?style=flat-square&logo=github&logoColor=white" alt="Awards" />
-</p>
+I'm obsessed with building products that scale — from pixel-perfect UIs to resilient backend systems.  
+Great software is **invisible**: it just *works*, fast and reliably.
 
 ---
 
-## 🛠 Tech Stack & Tooling
+## 🛠 Tech Stack
 
-### Frontend (Core)
-| Technology | Proficiency | Years | Why I Use It |
-|---|---|---|---|
-| **React / Next.js** | <svg width="200" height="14" viewBox="0 0 200 14" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="neon1" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#00d4ff"/><stop offset="50%" style="stop-color:#39ff14"/><stop offset="100%" style="stop-color:#bc13fe"/></linearGradient></defs><rect width="200" height="14" rx="7" fill="#1a1a2e"/><rect width="0" height="14" rx="7" fill="url(#neon1)"><animate attributeName="width" from="0" to="190" dur="1.5s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1"/></rect></svg> 95% | 5+ | App Router, Server Components, streaming |
-| **TypeScript** | <svg width="200" height="14" viewBox="0 0 200 14" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="neon2" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#00d4ff"/><stop offset="50%" style="stop-color:#39ff14"/><stop offset="100%" style="stop-color:#bc13fe"/></linearGradient></defs><rect width="200" height="14" rx="7" fill="#1a1a2e"/><rect width="0" height="14" rx="7" fill="url(#neon2)"><animate attributeName="width" from="0" to="180" dur="1.5s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1"/></rect></svg> 90% | 4+ | Strict mode, inference, type-safe routes |
-| **Tailwind CSS** | <svg width="200" height="14" viewBox="0 0 200 14" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="neon3" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#00d4ff"/><stop offset="50%" style="stop-color:#39ff14"/><stop offset="100%" style="stop-color:#bc13fe"/></linearGradient></defs><rect width="200" height="14" rx="7" fill="#1a1a2e"/><rect width="0" height="14" rx="7" fill="url(#neon3)"><animate attributeName="width" from="0" to="180" dur="1.5s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1"/></rect></svg> 90% | 3+ | Utility-first, dark mode, JIT compilation |
-| **TanStack Query** | <svg width="200" height="14" viewBox="0 0 200 14" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="neon4" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#00d4ff"/><stop offset="50%" style="stop-color:#39ff14"/><stop offset="100%" style="stop-color:#bc13fe"/></linearGradient></defs><rect width="200" height="14" rx="7" fill="#1a1a2e"/><rect width="0" height="14" rx="7" fill="url(#neon4)"><animate attributeName="width" from="0" to="170" dur="1.5s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1"/></rect></svg> 85% | 3+ | Server state, caching, optimistic updates |
-| **Zod** | <svg width="200" height="14" viewBox="0 0 200 14" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="neon5" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#00d4ff"/><stop offset="50%" style="stop-color:#39ff14"/><stop offset="100%" style="stop-color:#bc13fe"/></linearGradient></defs><rect width="200" height="14" rx="7" fill="#1a1a2e"/><rect width="0" height="14" rx="7" fill="url(#neon5)"><animate attributeName="width" from="0" to="170" dur="1.5s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1"/></rect></svg> 85% | 2+ | Runtime validation, schema inference |
+**Core Languages & Frameworks**
 
-### Backend & Database
-| Technology | Proficiency | Years | Why I Use It |
-|---|---|---|---|
-| **Node.js / Fastify** | <svg width="200" height="14" viewBox="0 0 200 14" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="neon6" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#00d4ff"/><stop offset="50%" style="stop-color:#39ff14"/><stop offset="100%" style="stop-color:#bc13fe"/></linearGradient></defs><rect width="200" height="14" rx="7" fill="#1a1a2e"/><rect width="0" height="14" rx="7" fill="url(#neon6)"><animate attributeName="width" from="0" to="190" dur="1.5s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1"/></rect></svg> 95% | 5+ | Performance, schema validation, hooks |
-| **PostgreSQL** | <svg width="200" height="14" viewBox="0 0 200 14" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="neon7" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#00d4ff"/><stop offset="50%" style="stop-color:#39ff14"/><stop offset="100%" style="stop-color:#bc13fe"/></linearGradient></defs><rect width="200" height="14" rx="7" fill="#1a1a2e"/><rect width="0" height="14" rx="7" fill="url(#neon7)"><animate attributeName="width" from="0" to="180" dur="1.5s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1"/></rect></svg> 90% | 5+ | ACID, JSONB, advanced indexing |
-| **Redis** | <svg width="200" height="14" viewBox="0 0 200 14" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="neon8" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#00d4ff"/><stop offset="50%" style="stop-color:#39ff14"/><stop offset="100%" style="stop-color:#bc13fe"/></linearGradient></defs><rect width="200" height="14" rx="7" fill="#1a1a2e"/><rect width="0" height="14" rx="7" fill="url(#neon8)"><animate attributeName="width" from="0" to="170" dur="1.5s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1"/></rect></svg> 85% | 3+ | Caching, sessions, rate limiting |
-| **Prisma / Drizzle** | <svg width="200" height="14" viewBox="0 0 200 14" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="neon9" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#00d4ff"/><stop offset="50%" style="stop-color:#39ff14"/><stop offset="100%" style="stop-color:#bc13fe"/></linearGradient></defs><rect width="200" height="14" rx="7" fill="#1a1a2e"/><rect width="0" height="14" rx="7" fill="url(#neon9)"><animate attributeName="width" from="0" to="170" dur="1.5s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1"/></rect></svg> 85% | 3+ | Type-safe ORM, migrations, DX |
-| **tRPC** | <svg width="200" height="14" viewBox="0 0 200 14" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="neon10" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#00d4ff"/><stop offset="50%" style="stop-color:#39ff14"/><stop offset="100%" style="stop-color:#bc13fe"/></linearGradient></defs><rect width="200" height="14" rx="7" fill="#1a1a2e"/><rect width="0" height="14" rx="7" fill="url(#neon10)"><animate attributeName="width" from="0" to="160" dur="1.5s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1"/></rect></svg> 80% | 2+ | End-to-end types, no codegen |
+![TypeScript](https://img.shields.io/badge/TypeScript-0d0d0f?style=for-the-badge&logo=typescript&logoColor=7c6aff)
+![React](https://img.shields.io/badge/React-0d0d0f?style=for-the-badge&logo=react&logoColor=00e5c9)
+![Next.js](https://img.shields.io/badge/Next.js-0d0d0f?style=for-the-badge&logo=nextdotjs&logoColor=ffffff)
+![React Native](https://img.shields.io/badge/React_Native-0d0d0f?style=for-the-badge&logo=react&logoColor=7c6aff)
+![Node.js](https://img.shields.io/badge/Node.js-0d0d0f?style=for-the-badge&logo=nodedotjs&logoColor=00e5c9)
+![Python](https://img.shields.io/badge/Python-0d0d0f?style=for-the-badge&logo=python&logoColor=7c6aff)
 
-### Infrastructure & DX
-| Technology | Proficiency | Years | Why I Use It |
-|---|---|---|---|
-| **Vercel / AWS** | <svg width="200" height="14" viewBox="0 0 200 14" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="neon11" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#00d4ff"/><stop offset="50%" style="stop-color:#39ff14"/><stop offset="100%" style="stop-color:#bc13fe"/></linearGradient></defs><rect width="200" height="14" rx="7" fill="#1a1a2e"/><rect width="0" height="14" rx="7" fill="url(#neon11)"><animate attributeName="width" from="0" to="170" dur="1.5s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1"/></rect></svg> 85% | 4+ | Edge functions, preview deployments |
-| **Docker** | <svg width="200" height="14" viewBox="0 0 200 14" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="neon12" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#00d4ff"/><stop offset="50%" style="stop-color:#39ff14"/><stop offset="100%" style="stop-color:#bc13fe"/></linearGradient></defs><rect width="200" height="14" rx="7" fill="#1a1a2e"/><rect width="0" height="14" rx="7" fill="url(#neon12)"><animate attributeName="width" from="0" to="170" dur="1.5s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1"/></rect></svg> 85% | 3+ | Consistent environments, multi-stage |
-| **GitHub Actions** | <svg width="200" height="14" viewBox="0 0 200 14" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="neon13" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#00d4ff"/><stop offset="50%" style="stop-color:#39ff14"/><stop offset="100%" style="stop-color:#bc13fe"/></linearGradient></defs><rect width="200" height="14" rx="7" fill="#1a1a2e"/><rect width="0" height="14" rx="7" fill="url(#neon13)"><animate attributeName="width" from="0" to="180" dur="1.5s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1"/></rect></svg> 90% | 4+ | CI/CD, matrix, reusable workflows |
-| **Biome / ESLint** | <svg width="200" height="14" viewBox="0 0 200 14" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="neon14" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#00d4ff"/><stop offset="50%" style="stop-color:#39ff14"/><stop offset="100%" style="stop-color:#bc13fe"/></linearGradient></defs><rect width="200" height="14" rx="7" fill="#1a1a2e"/><rect width="0" height="14" rx="7" fill="url(#neon14)"><animate attributeName="width" from="0" to="170" dur="1.5s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1"/></rect></svg> 85% | 2+ | Fast linting, formatting, import sorting |
-| **Turborepo** | <svg width="200" height="14" viewBox="0 0 200 14" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="neon15" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#00d4ff"/><stop offset="50%" style="stop-color:#39ff14"/><stop offset="100%" style="stop-color:#bc13fe"/></linearGradient></defs><rect width="200" height="14" rx="7" fill="#1a1a2e"/><rect width="0" height="14" rx="7" fill="url(#neon15)"><animate attributeName="width" from="0" to="150" dur="1.5s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1"/></rect></svg> 75% | 2+ | Monorepo builds, remote caching |
+**Tools & Platforms**
 
-### Quietly Powerful (Not Hyped, Just Solid)
-| Technology | Why It Matters |
-|---|---|
-| **SQLite (libSQL/Turso)** | Embedded, replicated, edge-ready database |
-| **Hono** | Ultra-fast web framework, WinterCG compliant |
-| **ArkType** | 1:1 TypeScript validation, no decorators |
-| **Effect** | Typed functional effects, structured concurrency |
-| **PGlite** | WASM Postgres in browser/Node, zero deps |
-| **UnoCSS** | On-demand atomic CSS, fully configurable |
-| **tsx** | TypeScript execution, native ESM, fast |
-| **knip** | Dead code detection, unused exports/dependencies |
+![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-0d0d0f?style=for-the-badge&logo=tailwindcss&logoColor=00e5c9)
+![Prisma](https://img.shields.io/badge/Prisma-0d0d0f?style=for-the-badge&logo=prisma&logoColor=ffffff)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-0d0d0f?style=for-the-badge&logo=postgresql&logoColor=7c6aff)
+![GraphQL](https://img.shields.io/badge/GraphQL-0d0d0f?style=for-the-badge&logo=graphql&logoColor=e535ab)
+![tRPC](https://img.shields.io/badge/tRPC-0d0d0f?style=for-the-badge&logo=trpc&logoColor=00e5c9)
 
-### Currently Exploring
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=rust,wasm,graphql,deno,bun&theme=dark" alt="Learning" />
-</p>
+**Infrastructure & DevOps**
+
+![Docker](https://img.shields.io/badge/Docker-0d0d0f?style=for-the-badge&logo=docker&logoColor=2496ed)
+![Vercel](https://img.shields.io/badge/Vercel-0d0d0f?style=for-the-badge&logo=vercel&logoColor=ffffff)
+![AWS](https://img.shields.io/badge/AWS-0d0d0f?style=for-the-badge&logo=amazonwebservices&logoColor=ff9900)
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-0d0d0f?style=for-the-badge&logo=githubactions&logoColor=00e5c9)
 
 ---
 
-## 📊 GitHub Analytics
+## 📊 GitHub Stats
 
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=supernovaprime&show_icons=true&theme=radical&hide_border=true&include_all_commits=true&count_private=true&rank_icon=github&custom_title=Overview&title_color=A855F7&text_color=E6EDF3&icon_color=58A6FF&bg_color=0D1117" width="48%" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=supernovaprime&layout=compact&theme=radical&hide_border=true&title_color=A855F7&text_color=E6EDF3&bg_color=0D1117&langs_count=12" width="48%" />
-</p>
+<!-- Replace YOUR_USERNAME with your actual GitHub username -->
 
-<p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=supernovaprime&theme=radical&hide_border=true&bg_color=0D1117&color=A855F7&line=58A6FF&point=FFFFFF&area=true&area_color=A855F720" alt="Activity Graph" />
-</p>
+<div align="center">
 
----
+<img height="160" src="https://github-readme-stats.vercel.app/api?username=YOUR_USERNAME&show_icons=true&theme=transparent&title_color=7c6aff&icon_color=00e5c9&text_color=888899&border_color=2a2a3a&ring_color=7c6aff&hide_border=false&count_private=true" />
 
-## 🧱 Projects
+<img height="160" src="https://github-readme-stats.vercel.app/api/top-langs/?username=YOUR_USERNAME&layout=compact&theme=transparent&title_color=7c6aff&text_color=888899&border_color=2a2a3a&hide_border=false&langs_count=6" />
 
-Public repositories showcasing full-stack web development:
+</div>
 
-### 🏢 [velvron-labs](https://github.com/supernovaprime/velvron-labs)
-> **Stack:** TypeScript, React, Tailwind CSS
-> 
-> Company website/portfolio for Velvron Labs — modern, performant, and accessible web presence. Live at **velvronlabs.vercel.app**
-> 
-> ![Stars](https://img.shields.io/github/stars/supernovaprime/velvron-labs?style=flat-square&color=A855F7&logo=github) ![Last Commit](https://img.shields.io/github/last-commit/supernovaprime/velvron-labs?style=flat-square&color=58A6FF) ![Language](https://img.shields.io/github/languages/top/supernovaprime/velvron-labs?style=flat-square&color=3FB950) ![Live Demo](https://img.shields.io/badge/Live-velvronlabs.vercel.app-000000?style=flat-square&logo=vercel&logoColor=white)
+<div align="center">
+
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=YOUR_USERNAME&theme=transparent&background=0d0d0f&ring=7c6aff&fire=00e5c9&currStreakLabel=7c6aff&sideLabels=888899&dates=555566&stroke=2a2a3a&border=2a2a3a" />
+
+</div>
 
 ---
 
-### 🌐 [portfolio](https://github.com/supernovaprime/portfolio)
-> **Stack:** TypeScript, Next.js, Tailwind CSS
-> 
-> Personal portfolio website — built with Next.js App Router, featuring animations, dark mode, and responsive design. Live at **supernovaprimeportfolio.vercel.app**
-> 
-> ![Stars](https://img.shields.io/github/stars/supernovaprime/portfolio?style=flat-square&color=A855F7&logo=github) ![Last Commit](https://img.shields.io/github/last-commit/supernovaprime/portfolio?style=flat-square&color=58A6FF) ![Language](https://img.shields.io/github/languages/top/supernovaprime/portfolio?style=flat-square&color=3FB950) ![Live Demo](https://img.shields.io/badge/Live-supernovaprimeportfolio.vercel.app-000000?style=flat-square&logo=vercel&logoColor=white)
+## 🚀 Currently Building
+
+<table>
+  <tr>
+    <td width="50%">
+      <h3>🌐 nova-platform</h3>
+      <p>A scalable SaaS boilerplate with auth, billing, and multi-tenancy — built for speed-to-market.</p>
+      <p>
+        <img src="https://img.shields.io/badge/Next.js-0d0d0f?style=flat-square&logo=nextdotjs&logoColor=white"/>
+        <img src="https://img.shields.io/badge/TypeScript-0d0d0f?style=flat-square&logo=typescript&logoColor=7c6aff"/>
+        <img src="https://img.shields.io/badge/Stripe-0d0d0f?style=flat-square&logo=stripe&logoColor=635bff"/>
+        <img src="https://img.shields.io/badge/Prisma-0d0d0f?style=flat-square&logo=prisma&logoColor=white"/>
+      </p>
+      <p>⭐ 124 &nbsp;&nbsp; 🍴 38</p>
+    </td>
+    <td width="50%">
+      <h3>📱 snapcart-app</h3>
+      <p>Cross-platform e-commerce mobile app with real-time inventory and push notifications.</p>
+      <p>
+        <img src="https://img.shields.io/badge/React_Native-0d0d0f?style=flat-square&logo=react&logoColor=00e5c9"/>
+        <img src="https://img.shields.io/badge/Expo-0d0d0f?style=flat-square&logo=expo&logoColor=white"/>
+        <img src="https://img.shields.io/badge/Node.js-0d0d0f?style=flat-square&logo=nodedotjs&logoColor=3c873a"/>
+      </p>
+      <p>⭐ 87 &nbsp;&nbsp; 🍴 21</p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
+      <h3>⚡ graph-router</h3>
+      <p>A lightweight GraphQL API gateway with rate limiting, caching, and schema stitching.</p>
+      <p>
+        <img src="https://img.shields.io/badge/GraphQL-0d0d0f?style=flat-square&logo=graphql&logoColor=e535ab"/>
+        <img src="https://img.shields.io/badge/TypeScript-0d0d0f?style=flat-square&logo=typescript&logoColor=7c6aff"/>
+        <img src="https://img.shields.io/badge/Redis-0d0d0f?style=flat-square&logo=redis&logoColor=dc382d"/>
+      </p>
+      <p>⭐ 63 &nbsp;&nbsp; 🍴 14</p>
+    </td>
+    <td width="50%">
+      <h3>🗄 db-sentinel</h3>
+      <p>CLI tool for automated PostgreSQL backup, health monitoring, and alerting via Slack.</p>
+      <p>
+        <img src="https://img.shields.io/badge/Node.js-0d0d0f?style=flat-square&logo=nodedotjs&logoColor=3c873a"/>
+        <img src="https://img.shields.io/badge/PostgreSQL-0d0d0f?style=flat-square&logo=postgresql&logoColor=336791"/>
+        <img src="https://img.shields.io/badge/CLI-0d0d0f?style=flat-square&logo=gnubash&logoColor=white"/>
+      </p>
+      <p>⭐ 46 &nbsp;&nbsp; 🍴 9</p>
+    </td>
+  </tr>
+</table>
 
 ---
 
-### ⚙️ [Backend](https://github.com/supernovaprime/Backend)
-> **Stack:** JavaScript, Node.js, Express
-> 
-> Backend API services — RESTful APIs with authentication, database integration, and middleware patterns.
-> 
-> ![Stars](https://img.shields.io/github/stars/supernovaprime/Backend?style=flat-square&color=A855F7&logo=github) ![Last Commit](https://img.shields.io/github/last-commit/supernovaprime/Backend?style=flat-square&color=58A6FF) ![Language](https://img.shields.io/github/languages/top/supernovaprime/Backend?style=flat-square&color=3FB950)
+<div align="center">
 
----
+*`// built with precision · powered by curiosity · open to collabs`*
 
-### 🎮 [Examination](https://github.com/supernovaprime/Examination)
-> **Stack:** JavaScript, Three.js, WebGL
-> 
-> Interactive 3D WebGL scene with models — real-time rendering, camera controls, and model loading.
-> 
-> ![Stars](https://img.shields.io/github/stars/supernovaprime/Examination?style=flat-square&color=A855F7&logo=github) ![Last Commit](https://img.shields.io/github/last-commit/supernovaprime/Examination?style=flat-square&color=58A6FF) ![Language](https://img.shields.io/github/languages/top/supernovaprime/Examination?style=flat-square&color=3FB950)
-
----
-
-### 🏠 [hostelbookingmanagementsystem](https://github.com/supernovaprime/hostelbookingmanagementsystem)
-> **Stack:** TypeScript, React, Node.js, Database
-> 
-> Full-stack hostel booking management system — reservations, room management, user authentication, and admin dashboard.
-> 
-> ![Stars](https://img.shields.io/github/stars/supernovaprime/hostelbookingmanagementsystem?style=flat-square&color=A855F7&logo=github) ![Last Commit](https://img.shields.io/github/last-commit/supernovaprime/hostelbookingmanagementsystem?style=flat-square&color=58A6FF) ![Language](https://img.shields.io/github/languages/top/supernovaprime/hostelbookingmanagementsystem?style=flat-square&color=3FB950)
-
----
-
-### 📦 [inventorytrackingsystem](https://github.com/supernovaprime/inventorytrackingsystem)
-> **Stack:** JavaScript, Node.js, Database
-> 
-> Inventory tracking system — stock management, low-stock alerts, reporting, and CRUD operations.
-> 
-> ![Stars](https://img.shields.io/github/stars/supernovaprime/inventorytrackingsystem?style=flat-square&color=A855F7&logo=github) ![Last Commit](https://img.shields.io/github/last-commit/supernovaprime/inventorytrackingsystem?style=flat-square&color=58A6FF) ![Language](https://img.shields.io/github/languages/top/supernovaprime/inventorytrackingsystem?style=flat-square&color=3FB950)
-
----
-
-### 🎪 [premiumeventproject](https://github.com/supernovaprime/premiumeventproject)
-> **Stack:** JavaScript, Frontend, Backend
-> 
-> Event management platform — ticketing, scheduling, user management, and payment integration.
-> 
-> ![Stars](https://img.shields.io/github/stars/supernovaprime/premiumeventproject?style=flat-square&color=A855F7&logo=github) ![Last Commit](https://img.shields.io/github/last-commit/supernovaprime/premiumeventproject?style=flat-square&color=58A6FF) ![Language](https://img.shields.io/github/languages/top/supernovaprime/premiumeventproject?style=flat-square&color=3FB950)
-
----
-
-<details>
-<summary>🔧 <strong>Other Repositories</strong> (click to expand)</summary>
-
-| Repository | Description | Language | Updated |
-|---|---|---|---|
-| [supernovaprime](https://github.com/supernovaprime/supernovaprime) | GitHub Profile README | — | Jun 2026 |
-| [supernovaprime.github.io](https://github.com/supernovaprime/supernovaprime.github.io) | GitHub Pages site | — | Apr 2026 |
-
-</details>
-
----
-
-## 📈 Contribution Activity
-
-<p align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=supernovaprime&theme=radical&hide_border=true&bg_color=0D1117&title_color=A855F7&text_color=E6EDF3" alt="Profile Details" />
-</p>
-
-<p align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=supernovaprime&theme=radical&hide_border=true&bg_color=0D1117&title_color=A855F7&text_color=E6EDF3" alt="Repos per Language" />
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=supernovaprime&theme=radical&hide_border=true&bg_color=0D1117&title_color=A855F7&text_color=E6EDF3" alt="Most Commit Language" />
-</p>
-
-<p align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=supernovaprime&theme=radical&hide_border=true&bg_color=0D1117&title_color=A855F7&text_color=E6EDF3&utcOffset=0" alt="Productive Time" />
-</p>
-
----
-
-## 🏆 Achievements & Highlights
-
-<p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=supernovaprime&theme=radical&no-frame=true&no-bg=true&margin-w=10&margin-h=10&column=7&rank=SECRET,SSS,SS,S,AAA,AA,A,B,C" alt="Trophies" />
-</p>
-
----
-
-## 🤝 Let's Connect
-
-<p align="center">
-  <a href="https://github.com/supernovaprime">
-    <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white&labelColor=181717&color=A855F7" alt="GitHub" />
-  </a>
-  <a href="https://linkedin.com/in/frimpongbrichmond">
-    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=0A66C2&color=58A6FF" alt="LinkedIn" />
-  </a>
-  <a href="https://twitter.com/supernovaprime">
-    <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white&labelColor=0D8BD9&color=58A6FF" alt="Twitter" />
-  </a>
-  <a href="https://instagram.com/supernovaprime">
-    <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white&labelColor=E4405F&color=F778BA" alt="Instagram" />
-  </a>
-  <a href="mailto:ebenezerayimful@gmail.com">
-    <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white&labelColor=EA4335&color=F778BA" alt="Email" />
-  </a>
-  <a href="tel:+233545976400">
-    <img src="https://img.shields.io/badge/Phone-%2B233%2054%20597%206400-25D366?style=for-the-badge&logo=whatsapp&logoColor=white&labelColor=128C7E&color=3FB950" alt="Phone" />
-  </a>
-  <a href="https://supernovaprimeportfolio.vercel.app">
-    <img src="https://img.shields.io/badge/Portfolio-supernovaprimeportfolio.vercel.app-000000?style=for-the-badge&logo=vercel&logoColor=white&labelColor=181717&color=A855F7" alt="Portfolio" />
-  </a>
-</p>
-
----
-
-## 💡 Philosophy
-
-> **"Talk is cheap. Show me the code."** — Linus Torvalds
->
-> **"First, solve the problem. Then, write the code."** — John Johnson
->
-> **"Simplicity is the soul of efficiency."** — Austin Freeman
-
----
-
-## 📊 Profile Views & Stats
-
-<p align="center">
-  <img src="https://komarev.com/ghpvc/?username=supernovaprime&style=flat-square&color=A855F7&label=Profile+Views" alt="Profile Views" />
-  <img src="https://img.shields.io/github/followers/supernovaprime?style=flat-square&color=58A6FF&label=Followers&logo=github" alt="Followers" />
-  <img src="https://img.shields.io/github/stars/supernovaprime?style=flat-square&color=3FB950&label=Total+Stars&logo=github" alt="Total Stars" />
-</p>
-
----
-
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0,2,4,6,8,10&height=100&section=footer&text=Thanks+for+visiting!&fontSize=24&fontColor=E6EDF3&animation=fadeIn&fontAlignY=35" alt="Footer" />
-</p>
-
-<p align="center">
-  <sub>🚀 Built with <a href="https://github.com/supernovaprime">supernovaprime</a> • Updated via GitHub Actions • Last updated: <!--DATE-->2026-06-05 14:52 UTC
-</p>
-
----
-
-*Always coding, always learning, always building! ✨*
+</div>
