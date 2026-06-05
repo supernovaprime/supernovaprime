@@ -43,6 +43,12 @@
         <feMergeNode in="SourceGraphic" />
       </feMerge>
     </filter>
+
+    <!-- Typing Clip Paths -->
+    <clipPath id="clip1"><rect id="rect1" x="34" y="60" width="0" height="20" /></clipPath>
+    <clipPath id="clip2"><rect id="rect2" x="34" y="60" width="0" height="20" /></clipPath>
+    <clipPath id="clip3"><rect id="rect3" x="34" y="60" width="0" height="20" /></clipPath>
+    <clipPath id="clip4"><rect id="rect4" x="34" y="60" width="0" height="20" /></clipPath>
   </defs>
 
   <style>
@@ -63,14 +69,123 @@
       50% { opacity: 0.4; }
       100% { transform: translateX(20px); opacity: 0; }
     }
+    
+    /* Terminal Typewriter Animations */
+    @keyframes rect1-anim {
+      0% { width: 0; }
+      5% { width: 135px; }
+      15% { width: 135px; }
+      18.3% { width: 0; }
+      100% { width: 0; }
+    }
+    @keyframes rect2-anim {
+      0%, 25% { width: 0; }
+      30% { width: 160px; }
+      40% { width: 160px; }
+      43.3% { width: 0; }
+      100% { width: 0; }
+    }
+    @keyframes rect3-anim {
+      0%, 50% { width: 0; }
+      55% { width: 135px; }
+      65% { width: 135px; }
+      68.3% { width: 0; }
+      100% { width: 0; }
+    }
+    @keyframes rect4-anim {
+      0%, 75% { width: 0; }
+      80% { width: 145px; }
+      90% { width: 145px; }
+      93.3% { width: 0; }
+      100% { width: 0; }
+    }
+
+    @keyframes text1-opac {
+      0%, 24.9% { opacity: 1; }
+      25%, 100% { opacity: 0; }
+    }
+    @keyframes text2-opac {
+      0%, 24.9% { opacity: 0; }
+      25%, 49.9% { opacity: 1; }
+      50%, 100% { opacity: 0; }
+    }
+    @keyframes text3-opac {
+      0%, 49.9% { opacity: 0; }
+      50%, 74.9% { opacity: 1; }
+      75%, 100% { opacity: 0; }
+    }
+    @keyframes text4-opac {
+      0%, 74.9% { opacity: 0; }
+      75%, 99.9% { opacity: 1; }
+      100% { opacity: 0; }
+    }
+
+    /* Terminal Cursor Movement Synchronized with Typist */
+    @keyframes cursor-move {
+      0% { transform: translateX(0px); }
+      5% { transform: translateX(135px); }
+      15% { transform: translateX(135px); }
+      18.3% { transform: translateX(0px); }
+      25% { transform: translateX(0px); }
+      
+      30% { transform: translateX(160px); }
+      40% { transform: translateX(160px); }
+      43.3% { transform: translateX(0px); }
+      50% { transform: translateX(0px); }
+      
+      55% { transform: translateX(135px); }
+      65% { transform: translateX(135px); }
+      68.3% { transform: translateX(0px); }
+      75% { transform: translateX(0px); }
+      
+      80% { transform: translateX(145px); }
+      90% { transform: translateX(145px); }
+      93.3% { transform: translateX(0px); }
+      100% { transform: translateX(0px); }
+    }
+
+    /* Cryptographic Loading Stages */
+    @keyframes decrypt-stage1 {
+      0% { opacity: 1; }
+      25% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes decrypt-stage2 {
+      0%, 25% { opacity: 0; }
+      25.1% { opacity: 1; }
+      50% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes decrypt-stage3 {
+      0%, 50% { opacity: 0; fill: #00d4ff; }
+      50.1% { opacity: 1; fill: #00d4ff; }
+      75% { opacity: 1; fill: #00d4ff; }
+      75.1% { fill: url(#neonGradient); opacity: 1; }
+      100% { fill: url(#neonGradient); opacity: 1; }
+    }
+
     .star { animation: pulse 3s infinite ease-in-out; }
     .star-fast { animation: pulse 1.5s infinite ease-in-out; }
     .star-slow { animation: pulse 4s infinite ease-in-out; }
-    .cursor { animation: blink 0.9s infinite steps(2, start); }
+    .cursor { animation: cursor-move 12s infinite linear, blink 0.8s infinite steps(2, start); }
     .floating { animation: float 5s infinite ease-in-out; }
     .neon-text { font-family: 'JetBrains Mono', 'Fira Code', monospace, sans-serif; }
     .glowing-name { filter: url(#neonGlow); }
     .drift { animation: driftRight 8s infinite linear; }
+
+    #rect1 { animation: rect1-anim 12s infinite linear; }
+    #rect2 { animation: rect2-anim 12s infinite linear; }
+    #rect3 { animation: rect3-anim 12s infinite linear; }
+    #rect4 { animation: rect4-anim 12s infinite linear; }
+
+    .phrase1 { animation: text1-opac 12s infinite linear; }
+    .phrase2 { animation: text2-opac 12s infinite linear; }
+    .phrase3 { animation: text3-opac 12s infinite linear; }
+    .phrase4 { animation: text4-opac 12s infinite linear; }
+
+    .decrypt-s1 { animation: decrypt-stage1 1.6s forwards; }
+    .decrypt-s2 { animation: decrypt-stage2 1.6s forwards; }
+    .decrypt-s3 { animation: decrypt-stage3 1.6s forwards; }
   </style>
 
   <!-- Background -->
@@ -125,13 +240,28 @@
     
     <!-- Code line terminal contents -->
     <text class="neon-text" x="20" y="48" font-size="11" fill="#39ff14">supernovaprime@dev:<tspan fill="#00d4ff">~</tspan>$ <tspan fill="#ffffff" font-weight="bold">node</tspan></text>
-    <text class="neon-text" x="20" y="74" font-size="11" fill="#bc13fe">&gt; Building the future</text>
-    <rect class="cursor" x="180" y="63" width="7" height="12" fill="#bc13fe"/>
+    
+    <!-- Shell prompt -->
+    <text class="neon-text" x="20" y="74" font-size="11" fill="#bc13fe">&gt;</text>
+    
+    <!-- Alternating typed phrases -->
+    <text class="neon-text phrase1" x="34" y="74" font-size="11" fill="#bc13fe" clip-path="url(#clip1)">Building the future</text>
+    <text class="neon-text phrase2" x="34" y="74" font-size="11" fill="#bc13fe" clip-path="url(#clip2)">Designing architectures</text>
+    <text class="neon-text phrase3" x="34" y="74" font-size="11" fill="#bc13fe" clip-path="url(#clip3)">Writing robust code</text>
+    <text class="neon-text phrase4" x="34" y="74" font-size="11" fill="#bc13fe" clip-path="url(#clip4)">Velvron Labs Engineer</text>
+    
+    <!-- Active tracking cursor -->
+    <rect class="cursor" x="34" y="63" width="7" height="12" fill="#bc13fe"/>
   </g>
 
-  <!-- Glowing Header Name with Live Flowing Linear Gradient -->
+  <!-- Glowing Header Name with Live Flowing Linear Gradient & Decryption -->
   <g class="glowing-name">
-    <text class="neon-text" x="430" y="222" text-anchor="middle" font-size="30" font-weight="900" fill="url(#neonGradient)" letter-spacing="3">SUPERNOVAPRIME</text>
+    <!-- Stage 1: Glitched/Alien symbols -->
+    <text class="neon-text decrypt-s1" x="430" y="222" text-anchor="middle" font-size="30" font-weight="900" letter-spacing="3" fill="#00d4ff">§$¥@&amp;#%*?+!§$¥</text>
+    <!-- Stage 2: Half-decoded characters -->
+    <text class="neon-text decrypt-s2" x="430" y="222" text-anchor="middle" font-size="30" font-weight="900" letter-spacing="3" fill="#00d4ff">SµP€RNoV∆P®IµE</text>
+    <!-- Stage 3: Fully resolved and shifting neon colors -->
+    <text class="neon-text decrypt-s3" x="430" y="222" text-anchor="middle" font-size="30" font-weight="900" letter-spacing="3">SUPERNOVAPRIME</text>
   </g>
   <text class="neon-text" x="430" y="246" text-anchor="middle" font-size="11.5" fill="#8c8ca3" font-weight="bold" letter-spacing="0.5">Software Engineer • Velvron Labs • Accra, Ghana 🇬🇭</text>
 </svg>
