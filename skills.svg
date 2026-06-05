@@ -1,18 +1,37 @@
 <svg width="860" height="240" viewBox="0 0 860 240" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="neonGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#00d4ff"/>
-      <stop offset="50%" stop-color="#bc13fe"/>
-      <stop offset="100%" stop-color="#39ff14"/>
+    <!-- Flowing gradient for left column bars -->
+    <linearGradient id="barGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00d4ff">
+        <animate attributeName="stop-color" values="#00d4ff; #bc13fe; #00d4ff" dur="4s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" stop-color="#bc13fe">
+        <animate attributeName="stop-color" values="#bc13fe; #00d4ff; #bc13fe" dur="4s" repeatCount="indefinite"/>
+      </stop>
     </linearGradient>
-    <linearGradient id="barGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#00d4ff"/>
-      <stop offset="100%" stop-color="#bc13fe"/>
-    </linearGradient>
+
+    <!-- Flowing gradient for right column bars -->
     <linearGradient id="barGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#bc13fe"/>
+      <stop offset="0%" stop-color="#bc13fe">
+        <animate attributeName="stop-color" values="#bc13fe; #39ff14; #bc13fe" dur="4s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" stop-color="#39ff14">
+        <animate attributeName="stop-color" values="#39ff14; #bc13fe; #39ff14" dur="4s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00d4ff"/>
       <stop offset="100%" stop-color="#39ff14"/>
     </linearGradient>
+
+    <filter id="glow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="2" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
   </defs>
 
   <style>
@@ -24,12 +43,17 @@
     @keyframes fillBar6 { from { width: 0px; } to { width: 170px; } }
     @keyframes fillBar7 { from { width: 0px; } to { width: 185px; } }
     @keyframes fillBar8 { from { width: 0px; } to { width: 190px; } }
+    @keyframes heartBeat {
+      0%, 100% { opacity: 0.3; }
+      50% { opacity: 1; }
+    }
     
     .neon-text { font-family: 'JetBrains Mono', 'Fira Code', monospace, sans-serif; }
     .skill-title { font-weight: bold; fill: #888899; font-size: 11.5px; }
-    .skill-val { font-weight: bold; fill: #555577; font-size: 10px; }
-    .bg-bar { fill: #111122; rx: 6px; }
-    .fill-bar { rx: 6px; }
+    .skill-val { font-weight: bold; fill: #a3a3c2; font-size: 10px; }
+    .bg-bar { fill: #0e0e1e; rx: 6px; }
+    .fill-bar { rx: 6px; filter: url(#glow); }
+    .status-dot { animation: heartBeat 2s infinite ease-in-out; }
     
     .b1 { animation: fillBar1 2s cubic-bezier(0.1, 0.8, 0.2, 1) forwards; }
     .b2 { animation: fillBar2 2s cubic-bezier(0.1, 0.8, 0.2, 1) forwards; }
@@ -42,31 +66,34 @@
   </style>
 
   <!-- Card Background -->
-  <rect width="860" height="240" rx="12" fill="#06060c" stroke="#1a1a2e" stroke-width="1.5"/>
+  <rect width="860" height="240" rx="12" fill="#040408" stroke="#1f1f3d" stroke-width="1.5"/>
 
-  <!-- Title -->
-  <text class="neon-text" x="30" y="35" font-size="13" font-weight="bold" fill="url(#neonGradient)">🔧 SKILL PROFICIENCY MATRIX</text>
-  <line x1="30" y1="48" x2="830" y2="48" stroke="#1a1a2e" stroke-width="1"/>
+  <!-- Title with Pulsing Heartbeat Visualizer -->
+  <g transform="translate(30, 35)">
+    <circle class="status-dot" cx="10" cy="-4" r="5" fill="#39ff14" filter="url(#glow)"/>
+    <text class="neon-text" x="25" y="0" font-size="13" font-weight="bold" fill="url(#titleGrad)">🔧 SKILL PROFICIENCY MATRIX</text>
+  </g>
+  <line x1="30" y1="48" x2="830" y2="48" stroke="#1f1f3d" stroke-width="1"/>
 
   <!-- Left Column -->
   <text class="neon-text skill-title" x="40" y="80">React / Next.js</text>
   <rect class="bg-bar" x="160" y="71" width="230" height="10"/>
-  <rect class="fill-bar b1" x="160" y="71" width="220" height="10" fill="url(#barGrad)"/>
+  <rect class="fill-bar b1" x="160" y="71" width="220" height="10" fill="url(#barGrad1)"/>
   <text class="neon-text skill-val" x="400" y="80">95%</text>
 
   <text class="neon-text skill-title" x="40" y="115">TypeScript</text>
   <rect class="bg-bar" x="160" y="106" width="230" height="10"/>
-  <rect class="fill-bar b2" x="160" y="106" width="210" height="10" fill="url(#barGrad)"/>
+  <rect class="fill-bar b2" x="160" y="106" width="210" height="10" fill="url(#barGrad1)"/>
   <text class="neon-text skill-val" x="400" y="115">90%</text>
 
   <text class="neon-text skill-title" x="40" y="150">Node.js</text>
   <rect class="bg-bar" x="160" y="141" width="230" height="10"/>
-  <rect class="fill-bar b3" x="160" y="141" width="195" height="10" fill="url(#barGrad)"/>
+  <rect class="fill-bar b3" x="160" y="141" width="195" height="10" fill="url(#barGrad1)"/>
   <text class="neon-text skill-val" x="400" y="150">85%</text>
 
   <text class="neon-text skill-title" x="40" y="185">PostgreSQL</text>
   <rect class="bg-bar" x="160" y="176" width="230" height="10"/>
-  <rect class="fill-bar b4" x="160" y="176" width="180" height="10" fill="url(#barGrad)"/>
+  <rect class="fill-bar b4" x="160" y="176" width="180" height="10" fill="url(#barGrad1)"/>
   <text class="neon-text skill-val" x="400" y="185">80%</text>
 
   <!-- Right Column -->

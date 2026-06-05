@@ -1,22 +1,48 @@
 <svg width="860" height="280" viewBox="0 0 860 280" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="neonGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#00d4ff"/>
-      <stop offset="50%" stop-color="#bc13fe"/>
-      <stop offset="100%" stop-color="#39ff14"/>
+    <!-- Flowing/animated linear gradient for the branding name -->
+    <linearGradient id="neonGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00d4ff">
+        <animate attributeName="stop-color" values="#00d4ff; #bc13fe; #39ff14; #00d4ff" dur="6s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="50%" stop-color="#bc13fe">
+        <animate attributeName="stop-color" values="#bc13fe; #39ff14; #00d4ff; #bc13fe" dur="6s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="100%" stop-color="#39ff14">
+        <animate attributeName="stop-color" values="#39ff14; #00d4ff; #bc13fe; #39ff14" dur="6s" repeatCount="indefinite" />
+      </stop>
     </linearGradient>
-    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#00d4ff"/>
-      <stop offset="50%" stop-color="#bc13fe"/>
-      <stop offset="100%" stop-color="#39ff14"/>
+
+    <!-- Animated border gradient for terminal card -->
+    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#39ff14">
+        <animate attributeName="stop-color" values="#39ff14; #00d4ff; #bc13fe; #39ff14" dur="8s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="50%" stop-color="#00d4ff">
+        <animate attributeName="stop-color" values="#00d4ff; #bc13fe; #39ff14; #00d4ff" dur="8s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="100%" stop-color="#bc13fe">
+        <animate attributeName="stop-color" values="#bc13fe; #39ff14; #00d4ff; #bc13fe" dur="8s" repeatCount="indefinite" />
+      </stop>
     </linearGradient>
+
     <radialGradient id="glow" cx="50%" cy="50%" r="50%">
       <stop offset="0%" stop-color="#bc13fe" stop-opacity="0.15"/>
-      <stop offset="100%" stop-color="#0a0a12" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#05050a" stop-opacity="0"/>
     </radialGradient>
+
     <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
       <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#ffffff" stroke-opacity="0.03" stroke-width="1"/>
     </pattern>
+
+    <!-- Glowing filter for the neon elements -->
+    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
   </defs>
 
   <style>
@@ -24,75 +50,88 @@
       0%, 100% { opacity: 0.2; }
       50% { opacity: 0.8; }
     }
-    @keyframes glowPulse {
-      0%, 100% { filter: drop-shadow(0 0 2px #00d4ff); }
-      50% { filter: drop-shadow(0 0 8px #bc13fe); }
-    }
     @keyframes blink {
       0%, 100% { opacity: 1; }
       50% { opacity: 0; }
     }
     @keyframes float {
       0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-5px); }
+      50% { transform: translateY(-6px); }
+    }
+    @keyframes driftRight {
+      0% { transform: translateX(-10px); opacity: 0; }
+      50% { opacity: 0.4; }
+      100% { transform: translateX(20px); opacity: 0; }
     }
     .star { animation: pulse 3s infinite ease-in-out; }
-    .star-fast { animation: pulse 1.8s infinite ease-in-out; }
-    .star-slow { animation: pulse 4.5s infinite ease-in-out; }
+    .star-fast { animation: pulse 1.5s infinite ease-in-out; }
+    .star-slow { animation: pulse 4s infinite ease-in-out; }
     .cursor { animation: blink 0.9s infinite steps(2, start); }
-    .floating { animation: float 6s infinite ease-in-out; }
+    .floating { animation: float 5s infinite ease-in-out; }
     .neon-text { font-family: 'JetBrains Mono', 'Fira Code', monospace, sans-serif; }
-    .glow-effect { animation: glowPulse 4s infinite ease-in-out; }
+    .glowing-name { filter: url(#neonGlow); }
+    .drift { animation: driftRight 8s infinite linear; }
   </style>
 
   <!-- Background -->
-  <rect width="860" height="280" fill="#05050a"/>
-  <!-- Ambient glow behind terminal -->
-  <circle cx="430" cy="140" r="300" fill="url(#glow)"/>
-  <!-- Grid -->
+  <rect width="860" height="280" fill="#040408"/>
+  <circle cx="430" cy="140" r="280" fill="url(#glow)"/>
   <rect width="860" height="280" fill="url(#grid)"/>
 
-  <!-- Stars (Twinkling) -->
-  <circle class="star" cx="120" cy="40" r="1.5" fill="#00d4ff" />
-  <circle class="star-slow" cx="720" cy="50" r="1" fill="#bc13fe" />
-  <circle class="star-fast" cx="240" cy="220" r="1.2" fill="#39ff14" />
-  <circle class="star" cx="620" cy="210" r="1.5" fill="#ffffff" />
-  <circle class="star-slow" cx="80" cy="150" r="1" fill="#ffffff" />
-  <circle class="star-fast" cx="800" cy="140" r="1.3" fill="#00d4ff" />
+  <!-- Scanning line overlay (retro screen look) -->
+  <line x1="0" y1="0" x2="860" y2="0" stroke="#ffffff" stroke-opacity="0.01" stroke-width="280" stroke-dasharray="2 2" />
 
-  <!-- Binary Matrix Elements -->
-  <text class="neon-text star" x="50" y="80" font-size="10" fill="#39ff14" opacity="0.3">0101</text>
-  <text class="neon-text star-slow" x="760" y="90" font-size="10" fill="#00d4ff" opacity="0.25">1100</text>
-  <text class="neon-text star-fast" x="140" y="190" font-size="10" fill="#bc13fe" opacity="0.3">1010</text>
-  <text class="neon-text star" x="680" y="230" font-size="10" fill="#39ff14" opacity="0.2">0001</text>
+  <!-- Stars -->
+  <circle class="star" cx="80" cy="50" r="1.5" fill="#00d4ff" />
+  <circle class="star-slow" cx="740" cy="60" r="1.2" fill="#bc13fe" />
+  <circle class="star-fast" cx="210" cy="230" r="1.5" fill="#39ff14" />
+  <circle class="star-slow" cx="640" cy="220" r="1" fill="#ffffff" />
+  <circle class="star" cx="130" cy="160" r="1.2" fill="#ffffff" />
+  <circle class="star-fast" cx="810" cy="150" r="1.5" fill="#00d4ff" />
 
-  <!-- Top Status Badge -->
-  <g transform="translate(740, 25)">
-    <rect width="90" height="24" rx="12" fill="#0d0d1f" stroke="#1f1f3d" stroke-width="1"/>
-    <circle class="star-fast" cx="15" cy="12" r="4.5" fill="#39ff14"/>
-    <text class="neon-text" x="27" y="15" font-size="9.5" font-weight="bold" fill="#39ff14">ONLINE</text>
+  <!-- Floating Ambient Code Tokens -->
+  <g class="drift" style="animation-delay: 0s;">
+    <text class="neon-text" x="50" y="90" font-size="10" fill="#bc13fe" opacity="0.3">&lt;div&gt;</text>
+  </g>
+  <g class="drift" style="animation-delay: 3s;">
+    <text class="neon-text" x="720" y="100" font-size="10" fill="#39ff14" opacity="0.2">() =&gt; {}</text>
+  </g>
+  <g class="drift" style="animation-delay: 5s;">
+    <text class="neon-text" x="110" y="190" font-size="10" fill="#00d4ff" opacity="0.25">const x</text>
   </g>
 
-  <!-- Central Terminal Card -->
-  <g class="floating" transform="translate(260, 65)">
-    <!-- Main Box -->
-    <rect width="340" height="110" rx="10" fill="#0a0a16" stroke="url(#borderGrad)" stroke-width="1.5" class="glow-effect"/>
-    <!-- Terminal Header Bar -->
-    <path d="M0,10 Q0,0 10,0 L330,0 Q340,0 340,10 L340,25 L0,25 Z" fill="#0f0f26" stroke="url(#borderGrad)" stroke-width="1" clip-path="inset(0px 0px 1px 0px)"/>
-    <!-- Terminal Dots -->
-    <circle cx="16" cy="12" r="4" fill="#ff5f56"/>
-    <circle cx="28" cy="12" r="4" fill="#ffbd2e"/>
-    <circle cx="40" cy="12" r="4" fill="#27c93f"/>
-    <text class="neon-text" x="170" y="16" font-size="9" text-anchor="middle" fill="#8888aa">terminal — supernovaprime</text>
+  <!-- Online Indicator badge -->
+  <g transform="translate(730, 25)">
+    <rect width="100" height="26" rx="13" fill="#0d0d1f" stroke="#1f1f3d" stroke-width="1.5"/>
+    <circle cx="16" cy="13" r="4.5" fill="#39ff14">
+      <animate attributeName="opacity" values="1;0.4;1" dur="2s" repeatCount="indefinite" />
+    </circle>
+    <text class="neon-text" x="28" y="17" font-size="9" font-weight="bold" fill="#39ff14" letter-spacing="0.5">SYS ONLINE</text>
+  </g>
+
+  <!-- Central Terminal Card (Floating) -->
+  <g class="floating" transform="translate(260, 60)">
+    <!-- Base Glow Behind Card -->
+    <rect width="340" height="110" rx="10" fill="none" stroke="#bc13fe" stroke-width="6" opacity="0.1" filter="url(#neonGlow)"/>
+    <!-- Terminal Outer Frame -->
+    <rect width="340" height="110" rx="10" fill="#070712" stroke="url(#borderGrad)" stroke-width="1.5"/>
     
-    <!-- Terminal Content -->
+    <!-- Header Bar -->
+    <path d="M0,10 Q0,0 10,0 L330,0 Q340,0 340,10 L340,25 L0,25 Z" fill="#0e0e24" stroke="url(#borderGrad)" stroke-width="1" clip-path="inset(0px 0px 1px 0px)"/>
+    <circle cx="16" cy="12" r="4.5" fill="#ff5f56"/>
+    <circle cx="28" cy="12" r="4.5" fill="#ffbd2e"/>
+    <circle cx="40" cy="12" r="4.5" fill="#27c93f"/>
+    <text class="neon-text" x="170" y="16" font-size="9" text-anchor="middle" fill="#8888aa" font-weight="bold">terminal — supernovaprime</text>
+    
+    <!-- Code line terminal contents -->
     <text class="neon-text" x="20" y="48" font-size="11" fill="#39ff14">supernovaprime@dev:<tspan fill="#00d4ff">~</tspan>$ <tspan fill="#ffffff" font-weight="bold">node</tspan></text>
     <text class="neon-text" x="20" y="74" font-size="11" fill="#bc13fe">&gt; Building the future</text>
-    <!-- Bounded cursor position -->
     <rect class="cursor" x="180" y="63" width="7" height="12" fill="#bc13fe"/>
   </g>
 
-  <!-- Title & Branding -->
-  <text class="neon-text" x="430" y="225" text-anchor="middle" font-size="28" font-weight="900" fill="url(#neonGradient)" letter-spacing="2">SUPERNOVAPRIME</text>
-  <text class="neon-text" x="430" y="248" text-anchor="middle" font-size="11.5" fill="#8c8ca3">Software Engineer • Velvron Labs • Accra, Ghana 🇬🇭</text>
+  <!-- Glowing Header Name with Live Flowing Linear Gradient -->
+  <g class="glowing-name">
+    <text class="neon-text" x="430" y="222" text-anchor="middle" font-size="30" font-weight="900" fill="url(#neonGradient)" letter-spacing="3">SUPERNOVAPRIME</text>
+  </g>
+  <text class="neon-text" x="430" y="246" text-anchor="middle" font-size="11.5" fill="#8c8ca3" font-weight="bold" letter-spacing="0.5">Software Engineer • Velvron Labs • Accra, Ghana 🇬🇭</text>
 </svg>
