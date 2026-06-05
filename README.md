@@ -3,6 +3,7 @@
   <img src="./header.svg" width="860" alt="supernovaprime Header Banner" />
 </p>
 
+
 ---
 
 ## 👾 About Me
@@ -17,6 +18,7 @@ const supernovaprime = {
   available:  true,
 };
 
+```
 🛠 Tech Stack
 <p align="left">
 <img src="https://img.shields.io/badge/TypeScript-0a0a12?style=for-the-badge&logo=typescript&logoColor=00d4ff" alt="TypeScript" />
